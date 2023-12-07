@@ -8,7 +8,6 @@ import { ref } from "vue";
 //   
 // })
 
-const curId = 2
 
 const question = ref({
     id_question: 1,
@@ -30,15 +29,23 @@ const question = ref({
 });
 
 
+
 </script>
 
 <template>
     <div class="global">
         <div class="document">
             <h2 class="main-text">{{ question.question }}</h2>
-            <div>
-                <button :class="{ 'active': item.id_reponse == curId }" v-for="item of question.reponses" @click="$emit('testEmit', question.id_question, item.id_reponse)">{{ item.reponse }}</button>
+
+            <div class="reponses">
+                <div class="reponse" v-for="item of question.reponses" :key="item.id" >
+                    <button
+                    @click="$emit('testEmit', question.id_question, item.id_reponse)">
+                        {{ item.reponse }}
+                    </button>
+                </div>
             </div>
+            
         </div>
     </div>
 </template>
@@ -63,7 +70,19 @@ const question = ref({
     flex-direction: column;
     justify-content: space-between;
 }
-.active {
-    color: blue;
+
+
+.reponse {
+    display: flex;
+    position: relative;
 }
+.reponse:hover button {
+    color: blue;
+} 
+.reponse:hover::before{
+    content: "→";
+    position: absolute;
+    left: -1rem;
+}
+
 </style>
