@@ -38,7 +38,6 @@ defineProps({
 
 
             <div class="reponses">
-                <h3>Réponses</h3>
                 <div class="reponse" v-for="item of question.reponses" :key="item.id" >
                     <button
                     @click="$emit('testEmit', question.id_question, item.id_reponse)">
@@ -77,20 +76,37 @@ defineProps({
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .reponse {
     align-items: center;
     position: relative;
+    width: 8rem;
+    margin-bottom: 1rem;
+
 }
-.reponse:hover button {
-    color: blue;
-} 
-.reponse:hover::before{
-    content: "→";
-    position: absolute;
-    left: -1rem;
+
+.reponse button {
+    background-color: #04AA6D; 
+    color: white;
+    border: 2px solid #04AA6D;
+    border-radius: 4px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    width: 100%;
+
 }
+
+.reponse button:hover {
+  background-color: white;
+  color: #04AA6D;
+  border: 2px solid #04AA6D;
+}
+
 
 
 @keyframes onHoverIcon {
