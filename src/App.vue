@@ -73,19 +73,19 @@ const tabScore = ref([
 function modifScore(question_id, reponse_id){
   //console.log(tabQuestions.value[question_id])
   const question = tabQuestions.value[question_id];
-
+  /*
   if (!question) {
     console.error('Question non trouvée pour l\'ID :', question_id);
     return;
   }
-
+*/
   const reponse = question.reponses[reponse_id-1];
-
+  /*
   if (!reponse) {
     console.error('Réponse non trouvée pour l\'ID :', reponse_id);
     return;
   }
-
+  */
   tabScore.value[0].value += reponse.score.environnement;
   tabScore.value[1].value += reponse.score.finance;
   tabScore.value[2].value += reponse.score.confort;
@@ -102,7 +102,7 @@ const img = Math.floor(Math.random() * 2) == 0 ? bg1 : bg2
     <img :src="fg1" alt="" class="foreground">
     <img :src="img" alt="" class="background">
   </div>
-  <DocumentComp @modif-score="modifScore" :data="dataQuestion"></DocumentComp>
+  <DocumentComp @modif-score="modifScore" :question="dataQuestion"></DocumentComp>
 </template>
 
 <style scoped>
@@ -110,11 +110,15 @@ const img = Math.floor(Math.random() * 2) == 0 ? bg1 : bg2
   position: absolute;
   width: 100vw;
   height: auto;
+
+  bottom: 0px;
 }
 .background {
   position: absolute;
   width: 100vw;
   height: auto;
   z-index: -1;
+
+  bottom: 0px;
 }
 </style>
