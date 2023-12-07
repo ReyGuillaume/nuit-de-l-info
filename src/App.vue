@@ -67,8 +67,9 @@ const tabScore = ref([
 ]);
 
 function modifScore(question_id, reponse_id){
+  console.log(question_id, reponse_id);
   const question = tabQuestions.value[question_id];
-  const reponse = question.reponses[reponse_id];
+  const reponse = question.reponses[reponse_id-1];
   tabScore.value[0].value += reponse.score.environnement;
   tabScore.value[1].value += reponse.score.finance;
   tabScore.value[2].value += reponse.score.confort;
