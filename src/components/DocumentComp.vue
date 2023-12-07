@@ -19,16 +19,12 @@ const question = ref({
     }]
 });
 
-// function choisirReponse(id_reponse){
-//     $emit('CHANGEME', question)
-// }
-
-
 
 </script>
 <template>
     <div>
         Je suis un document
+        <button @click="$emit('testEmit', question.id_question, id_reponse)">J'envoie un emit</button>
     </div>
 </template>
 <style></style>
