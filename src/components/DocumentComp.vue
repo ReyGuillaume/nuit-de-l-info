@@ -37,7 +37,7 @@ const question = ref({
         <div class="document">
             <h2 class="main-text">{{ question.question }}</h2>
             <div>
-                <button :class="{ 'active': item.id_reponse == curId }" v-for="item of question.reponses" @click="$emit('testEmit', question.id_question, item.id_reponse)">{{ item.reponse }}</button>
+                <button :class="{ 'active': item.id_reponse == curId }" v-for="item of question.reponses" @click="$emit('modifScore', question.id_question, item.id_reponse)">{{ item.reponse }}</button>
             </div>
         </div>
     </div>
