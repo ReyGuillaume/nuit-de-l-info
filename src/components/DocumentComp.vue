@@ -36,11 +36,10 @@ const question = ref({
     <div class="global">
         <div class="document">
             <h2 class="main-text">{{ question.question }}</h2>
-            <ul>
-                <li :class="{ 'active': item.id_reponse == curId }" v-for="item of question.reponses">{{ item.reponse }}</li>
-            </ul>
+            <div>
+                <button :class="{ 'active': item.id_reponse == curId }" v-for="item of question.reponses" @click="$emit('testEmit', question.id_question, item.id_reponse)">{{ item.reponse }}</button>
+            </div>
         </div>
-        <button @click="$emit('testEmit', question.id_question, id_reponse)">J'envoie un emit</button>
     </div>
 </template>
 
