@@ -3,6 +3,10 @@ import DocumentComp from './components/DocumentComp.vue'
 import { ref, onMounted } from 'vue';
 import storie from './Stories.json'
 
+import fg1 from '../images/bureau1.png'
+import bg1 from '../images/background1.png'
+import bg2 from '../images/background2.png'
+
 var tabQuestions = storie.Sarah.questions
 var dataQuestion = ref(tabQuestions[0]);
 
