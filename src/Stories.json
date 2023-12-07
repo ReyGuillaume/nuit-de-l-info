@@ -1,0 +1,162 @@
+{
+    "Sarah":{
+        "questions":[
+            {
+                "id_question" : 1,
+                "question" : "Bonjour Sarah, \n Je suis très heureuse de savoir que tu as été accepté à l'université ! \n En plus tu es dans la même classe que ton amie Léa cette année, génial ! \n Je te souhaite plein de bonheur ! \n Maman.",
+                "explication" : "",
+                "require" : null,
+                "reponses" : [
+                    {
+                    "id_reponse" : "1_1",
+                    "reponse" : "Continuer",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                }
+            ]
+            }, 
+            {
+                "id_question" : 2,
+                "question" : "Je sais que l'université est loin \n J'ai trouvé plusieurs annonces pour toi, regardes les et dis moi ce que tu veux pour cette année",
+                "explication" : "",
+                "require" : null,
+                "reponses" : [
+                    {
+                    "id_reponse" : "2_1",
+                    "reponse" : "Utiliser la voiture de mes parents",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                },
+                {
+                    "id_reponse" : "2_2",
+                    "reponse" : "Prendre le bus",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                },
+                {
+                    "id_reponse" : "2_3",
+                    "reponse" : "Acheter ma propre voiture à essence",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                },
+                {
+                    "id_reponse" : "2_4",
+                    "reponse" : "Acheter ma propre voiture électrique",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                },
+                {
+                    "id_reponse" : "2_5",
+                    "reponse" : "Prendre mon vélo",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                },
+                {
+                    "id_reponse" : "2_6",
+                    "reponse" : "Demander à Léa de m'emmener",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                }
+            ]
+            },
+            {
+                "id_question" : 3,
+                "question" : "Bonjour Léa \n Votre université vous propose plusieurs associations étudiantes pour cette année \n Souhaitez-vous en intégrer une ?",
+                "explication" : "",
+                "require" : null,
+                "reponses" : [
+                    {
+                    "id_reponse" : "3_1",
+                    "reponse" : "« Alp’Gliss », une association de ski",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                },
+                {
+                    "id_reponse" : "3_2",
+                    "reponse" : "« Tous en sleep », une association de développeurs",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                },
+                {
+                    "id_reponse" : "3_3",
+                    "reponse" : "« Un câlin pour les marins », une association qui défend les droits des marins de Savoie",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                },
+                {
+                    "id_reponse" : "3_4",
+                    "reponse" : "Ne rien choisir",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                }
+            ]
+            },
+            {
+                "id_question" : 4,
+                "question" : "Salut Sarah c'est Léa ! Est-ce que tu veux venir au restaurant avec moi demain midi ?",
+                "explication" : "",
+                "require" : null,
+                "reponses" : [
+                    {
+                    "id_reponse" : "4_1",
+                    "reponse" : "Oui",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                },
+                {
+                    "id_reponse" : "4_2",
+                    "reponse" : "Non",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                }
+            ]
+            },
+            {
+                "id_question" : 5,
+                "question" : "Menu du restaurant",
+                "explication" : "",
+                "require" : "4_1",
+                "reponses" : [
+                    {
+                    "id_reponse" : "5_1",
+                    "reponse" : "Prendre du poisson",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                },
+                {
+                    "id_reponse" : "5_2",
+                    "reponse" : "Prendre de la viande",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                },
+                {
+                    "id_reponse" : "5_3",
+                    "reponse" : "Prendre une salade",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                }
+            ]
+            },
+            {
+                "id_question" : 6,
+                "question" : "Si on profitait d'être ensemble pour aller faire du shopping après ?",
+                "explication" : "",
+                "require" : "4_1",
+                "reponses" : [
+                    {
+                    "id_reponse" : "6_1",
+                    "reponse" : "Accepter",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                },
+                {
+                    "id_reponse" : "6_2",
+                    "reponse" : "Refuser",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                }
+            ]
+            }            
+        ]
+    }
+}
