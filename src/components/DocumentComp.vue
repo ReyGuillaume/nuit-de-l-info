@@ -38,6 +38,7 @@ const question = ref({
             <h2 class="main-text">{{ question.question }}</h2>
 
             <div class="reponses">
+                <h3>Réponses</h3>
                 <div class="reponse" v-for="item of question.reponses" :key="item.id" >
                     <button
                     @click="$emit('testEmit', question.id_question, item.id_reponse)">
