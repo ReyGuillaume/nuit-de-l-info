@@ -1,5 +1,4 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
 import DocumentComp from './components/DocumentComp.vue'
 import { ref } from 'vue';
 const tabQuestions = ref(
