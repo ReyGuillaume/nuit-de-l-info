@@ -41,7 +41,7 @@ defineProps({
                 <h3>Réponses</h3>
                 <div class="reponse" v-for="item of question.reponses" :key="item.id" >
                     <button
-                    @click="$emit('testEmit', question.id_question, item.id_reponse)">
+                    @click="$emit('modifScore', question.id_question, item.id_reponse)">
                         {{ item.reponse }}
                     </button>
                 </div>
