@@ -66,10 +66,15 @@ defineProps({
     width: calc(210 * .25vh);
     min-height: calc(297 * .25vh);
     background-color: #fffbfb;
+    background-color: rgba(238, 228, 228, 0.434);
     padding: 35px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.main-text {
+    color: white;
 }
 
 .reponses {
