@@ -3,7 +3,7 @@
         "questions":[
             {
                 "id_question" : 1,
-                "question" : "Bonjour Sarah, \n Je suis très heureuse de savoir que tu as été accepté à l'université ! \n En plus tu es dans la même classe que ton amie Léa cette année, génial ! \n Je te souhaite plein de bonheur ! \n Maman.",
+                "question" : "Bonjour Sarah, <br> Je suis très heureuse de savoir que tu as été accepté à l'université ! <br> En plus tu es dans la même classe que ton amie Léa cette année, génial ! <br> Je te souhaite plein de bonheur ! <br> Maman.",
                 "explication" : "",
                 "require" : null,
                 "reponses" : [
@@ -17,7 +17,7 @@
             }, 
             {
                 "id_question" : 2,
-                "question" : "Je sais que l'université est loin \n J'ai trouvé plusieurs annonces pour toi, regardes les et dis moi ce que tu veux pour cette année",
+                "question" : "Je sais que l'université est loin <br> J'ai trouvé plusieurs annonces pour toi, regardes les et dis moi ce que tu veux pour cette année",
                 "explication" : "",
                 "require" : null,
                 "reponses" : [
@@ -61,7 +61,7 @@
             },
             {
                 "id_question" : 3,
-                "question" : "Bonjour Léa \n Votre université vous propose plusieurs associations étudiantes pour cette année \n Souhaitez-vous en intégrer une ?",
+                "question" : "Bonjour Léa <br> Votre université vous propose plusieurs associations étudiantes pour cette année <br> Souhaitez-vous en intégrer une ?",
                 "explication" : "",
                 "require" : null,
                 "reponses" : [
@@ -145,18 +145,274 @@
                 "reponses" : [
                     {
                     "id_reponse" : "6_1",
-                    "reponse" : "Accepter",
+                    "reponse" : "Sauter de joie et partir dépenser sans compter avec elle",
                     "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
                     "require" : null
                 },
                 {
                     "id_reponse" : "6_2",
+                    "reponse" : "L'accompagner et acheter quelques bricoles",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                },
+                {
+                    "id_reponse" : "6_3",
+                    "reponse" : "Se contenter de l'accompagner",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                },
+                {
+                    "id_reponse" : "6_4",
                     "reponse" : "Refuser",
                     "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
                     "require" : null
                 }
             ]
-            }            
+            },
+            {
+                "id_question" : 7,
+                "question" : "C'est la fin du premier semestre <br> Mes parents ont reçus une proposition pour l'installation d'une nouvelle chaudière à fioul. <br> Ils m'ont dit qu'elle consommerait deux fois moins que l'ancienne.",
+                "explication" : "",
+                "require" : null,
+                "reponses" : [
+                    {
+                    "id_reponse" : "7_1",
+                    "reponse" : "Conseiller d'accepter",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                },
+                {
+                    "id_reponse" : "7_2",
+                    "reponse" : "Conseiller de refuser",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                },
+                {
+                    "id_reponse" : "7_3",
+                    "reponse" : "Conseiller plutôt de rénover l'isolation de la maison",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                },
+                {
+                    "id_reponse" : "7_4",
+                    "reponse" : "Ne rien conseiller",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                }
+            ]
+            },
+            {
+                "id_question" : 8,
+                "question" : "C'est les vacances ! <br> Qu'est-ce que je vais faire ?",
+                "explication" : "",
+                "require" : null,
+                "reponses" : [
+                    {
+                    "id_reponse" : "8_1",
+                    "reponse" : "Aller voir ma soeur qui habite à l'autre bout du pays (3h de train",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                },
+                {
+                    "id_reponse" : "8_2",
+                    "reponse" : "Aller au soleil pendant une semaine (8h d'avion)",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                },
+                {
+                    "id_reponse" : "8_3",
+                    "reponse" : "Aller avec Léa dans un centre de bien-être (2h de voiture)",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                },
+                {
+                    "id_reponse" : "8_4",
+                    "reponse" : "Rester à la maison",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                }
+            ]
+            },
+            {
+                "id_question" : 9,
+                "question" : "C'est la fin des vacances, on dirait que les gens ont envie de se rencontrer",
+                "explication" : "",
+                "require" : null,
+                "reponses" : [
+                    {
+                    "id_reponse" : "9_1",
+                    "reponse" : "Partir au ski avec mon association",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : "3_1"
+                },
+                {
+                    "id_reponse" : "9_2",
+                    "reponse" : "Passer une soirée à programmer",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : "3_2"
+                },
+                {
+                    "id_reponse" : "9_3",
+                    "reponse" : "Faire une marche pour défendre les marins savoyards",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : "3_3"
+                },
+                {
+                    "id_reponse" : "9_4",
+                    "reponse" : "Aller à la soirée organisée par Léa",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                },
+                {
+                    "id_reponse" : "9_5",
+                    "reponse" : "Rester tranquillement à la maison",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                }
+            ]
+            },             
+            {
+                "id_question" : 10,
+                "question" : "Salut Sarah c'est encore Léa ! Est-ce que tu veux venir au restaurant avec moi demain midi ? <br> J'en connais un autre qui serait super !",
+                "explication" : "",
+                "require" : null,
+                "reponses" : [
+                    {
+                    "id_reponse" : "10_1",
+                    "reponse" : "Oui",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                },
+                {
+                    "id_reponse" : "10_2",
+                    "reponse" : "Non",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                }
+            ]
+            },
+            {
+                "id_question" : 11,
+                "question" : "Menu du restaurant",
+                "explication" : "",
+                "require" : "10_1",
+                "reponses" : [
+                    {
+                    "id_reponse" : "11_1",
+                    "reponse" : "Prendre du poisson",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                },
+                {
+                    "id_reponse" : "11_2",
+                    "reponse" : "Prendre de la viande",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                },
+                {
+                    "id_reponse" : "11_3",
+                    "reponse" : "Prendre une salade",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                }
+            ]
+            },
+            {
+                "id_question" : 12,
+                "question" : "Bonjour, <br> Ceci est une message de la mairie <br> A partir de maintenant les utilisateurs de voitures thermique se verront attribuer une aide financière pour acheter une voiture électrique",
+                "explication" : "",
+                "require" : "2_3",
+                "reponses" : [
+                    {
+                    "id_reponse" : "12_1",
+                    "reponse" : "Utiliser l'offre pour acheter une voiture électrique",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                },
+                {
+                    "id_reponse" : "12_2",
+                    "reponse" : "Ne pas changer de voiture",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                }
+            ]
+            },
+            {
+                "id_question" : 13,
+                "question" : "Le second semestre a commencé ! <br> Et l'hiver aussi :(",
+                "explication" : "",
+                "require" : "7_4",
+                "reponses" : [
+                    {
+                    "id_reponse" : "13_1",
+                    "reponse" : "Mettre mon chauffage à 18°C",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                   "require" : null
+                },
+                {
+                    "id_reponse" : "13_2",
+                    "reponse" : "Mettre mon chauffage à 19°C",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                },
+                {
+                    "id_reponse" : "13_3",
+                    "reponse" : "Mettre mon chauffage à 20°C",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                },
+                {
+                    "id_reponse" : "13_3",
+                    "reponse" : "Mettre mon chauffage à 21°C",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                },
+                {
+                    "id_reponse" : "13_3",
+                    "reponse" : "Mettre mon chauffage à 22°C",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                }
+            ]
+            },
+            {
+                "id_question" : 14,
+                "question" : "Le second semestre a commencé ! <br> Et l'hiver aussi :(",
+                "explication" : "",
+                "require" : "7_1",
+                "reponses" : [
+                    {
+                    "id_reponse" : "14_1",
+                    "reponse" : "Mettre mon chauffage à 18°C",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                   "require" : null
+                },
+                {
+                    "id_reponse" : "14_2",
+                    "reponse" : "Mettre mon chauffage à 19°C",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                },
+                {
+                    "id_reponse" : "14_3",
+                    "reponse" : "Mettre mon chauffage à 20°C",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                },
+                {
+                    "id_reponse" : "14_3",
+                    "reponse" : "Mettre mon chauffage à 21°C",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                },
+                {
+                    "id_reponse" : "14_3",
+                    "reponse" : "Mettre mon chauffage à 22°C",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "require" : null
+                }
+            ]
+            }  
         ]
     }
 }
