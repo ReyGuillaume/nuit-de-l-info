@@ -7,7 +7,6 @@ defineProps({
   question: Object
 })
 
-const curId = 2
 
 // const question = ref({
 //     id_question: 1,
@@ -29,15 +28,25 @@ const curId = 2
 // });
 
 
+
 </script>
 
 <template>
     <div class="global">
         <div class="document">
             <h2 class="main-text">{{ question.question }}</h2>
-            <div>
-                <button :class="{ 'active': item.id_reponse == curId }" v-for="item of question.reponses" @click="$emit('modifScore', question.id_question, item.id_reponse)">{{ item.reponse }}</button>
-            </div>
+
+
+            <div class="reponses">
+                <h3>Réponses</h3>
+                <div class="reponse" v-for="item of question.reponses" :key="item.id" >
+                    <button
+                    @click="$emit('testEmit', question.id_question, item.id_reponse)">
+                        {{ item.reponse }}
+                    </button>
+                </div>
+
+         
         </div>
     </div>
 </template>
@@ -52,6 +61,7 @@ const curId = 2
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: onHoverIcon .5s;
 }
 .document {
     width: calc(210 * .25vh);
@@ -62,7 +72,39 @@ const curId = 2
     flex-direction: column;
     justify-content: space-between;
 }
-.active {
+
+
+.reponse {
+    display: flex;
+    position: relative;
+}
+.reponse:hover button {
     color: blue;
+} 
+.reponse:hover::before{
+    content: "→";
+    position: absolute;
+    left: -1rem;
+}
+
+
+@keyframes onHoverIcon {
+    0% {
+        top: -100%;
+        left: -50%;
+        transform: rotate(45deg);
+    }
+    50% {
+        top: 15%;
+        left: 15%;
+    }
+    75% {
+        top: -5%;
+        left: -5%;
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
 }
 </style>
