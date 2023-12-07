@@ -37,6 +37,7 @@ const question = ref({
         <div class="document">
             <h2 class="main-text">{{ question.question }}</h2>
 
+
             <div class="reponses">
                 <h3>Réponses</h3>
                 <div class="reponse" v-for="item of question.reponses" :key="item.id" >
@@ -45,8 +46,8 @@ const question = ref({
                         {{ item.reponse }}
                     </button>
                 </div>
-            </div>
-            
+
+         
         </div>
     </div>
 </template>
