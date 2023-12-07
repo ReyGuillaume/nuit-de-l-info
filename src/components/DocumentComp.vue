@@ -1,12 +1,13 @@
 <script setup>
-import { ref } from "vue";
+import { ref  } from "vue";
 // une question reçu par la page
 
-
 defineProps({
-  question: Object
+    question: Object
 })
 
+
+//console.log(question)
 
 // const question = ref({
 //     id_question: 1,
