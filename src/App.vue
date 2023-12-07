@@ -68,12 +68,26 @@ const tabScore = ref([
 ]);
 
 function modifScore(question_id, reponse_id){
+  //console.log(tabQuestions.value[question_id])
   const question = tabQuestions.value[question_id];
-  const reponse = question.reponses[reponse_id];
+  /*
+  if (!question) {
+    console.error('Question non trouvée pour l\'ID :', question_id);
+    return;
+  }
+  */
+  const reponse = question.reponses[reponse_id-1];
+  /*
+  if (!reponse) {
+    console.error('Réponse non trouvée pour l\'ID :', reponse_id);
+    return;
+  }
+  */
   tabScore.value[0].value += reponse.score.environnement;
   tabScore.value[1].value += reponse.score.finance;
   tabScore.value[2].value += reponse.score.confort;
-  dataQuestion.value = tabQuestions.value[question_id+1];
+  dataQuestion.value = tabQuestions.value[ question_id +1 ];
+  console.log( tabScore );
 }
 </script>
 
