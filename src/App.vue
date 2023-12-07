@@ -1,6 +1,8 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import DocumentComp from './components/DocumentComp.vue'
+import bg1 from '../images/bureau1.png'
+
 import { ref } from 'vue';
 const tabQuestions = ref(
   [{
@@ -78,8 +80,15 @@ function modifScore(question_id, reponse_id){
 </script>
 
 <template>
+  <div class="background">
+    <img :src="bg1" alt="" class="foreground">
+  </div>
   <DocumentComp @modif-score="modifScore" :data="dataQuestion"></DocumentComp>
 </template>
 
 <style scoped>
+.foreground {
+  width: 100vw;
+  height: auto;
+}
 </style>
