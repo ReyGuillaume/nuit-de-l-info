@@ -73,9 +73,14 @@ defineProps({
     justify-content: space-between;
 }
 
+.reponses {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 .reponse {
-    display: flex;
+    align-items: center;
     position: relative;
 }
 .reponse:hover button {
