@@ -60,6 +60,7 @@ const question = ref({
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: onHoverIcon .5s;
 }
 .document {
     width: calc(210 * .25vh);
@@ -85,4 +86,24 @@ const question = ref({
     left: -1rem;
 }
 
+
+@keyframes onHoverIcon {
+    0% {
+        top: -100%;
+        left: -50%;
+        transform: rotate(45deg);
+    }
+    50% {
+        top: 15%;
+        left: 15%;
+    }
+    75% {
+        top: -5%;
+        left: -5%;
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
 </style>
