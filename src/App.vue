@@ -1,7 +1,9 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import DocumentComp from './components/DocumentComp.vue'
-import bg1 from '../images/bureau1.png'
+import fg1 from '../images/bureau1.png'
+import bg1 from '../images/background1.png'
+import bg2 from '../images/background2.png'
 
 import { ref } from 'vue';
 const tabQuestions = ref(
@@ -77,18 +79,29 @@ function modifScore(question_id, reponse_id){
   tabScore.value[2].value += reponse.score.confort;
   dataQuestion.value = tabQuestions.value[question_id+1];
 }
+
+const img = Math.floor(Math.random() * 2) == 0 ? bg1 : bg2
+
 </script>
 
 <template>
-  <div class="background">
-    <img :src="bg1" alt="" class="foreground">
+  <div class="back">
+    <img :src="fg1" alt="" class="foreground">
+    <img :src="img" alt="" class="background">
   </div>
   <DocumentComp @modif-score="modifScore" :data="dataQuestion"></DocumentComp>
 </template>
 
 <style scoped>
 .foreground {
+  position: absolute;
   width: 100vw;
   height: auto;
+}
+.background {
+  position: absolute;
+  width: 100vw;
+  height: auto;
+  z-index: -1;
 }
 </style>
