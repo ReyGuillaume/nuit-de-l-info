@@ -71,7 +71,8 @@ defineProps({
     width: calc(210 * .25vh);
     min-height: calc(297 * .25vh);
     background-color: #fffbfb;
-    background-color: rgba(238, 228, 228, 0.434);
+    background-color: rgba(238, 228, 228, 0.896);
+    border-radius: 8%;
     padding: 35px;
     display: flex;
     flex-direction: column;
@@ -79,7 +80,7 @@ defineProps({
 }
 
 .main-text {
-    color: white;
+    color: #025627;
 }
 
 .reponses {
@@ -108,11 +109,12 @@ defineProps({
     font-size: 16px;
     transition-duration: 0.4s;
     width: 100%;
+    font-family: 'Courier New', Courier, monospace;
 
 }
 
 .reponse button:hover {
-  background-color: white;
+  background-color: rgba(238, 228, 228, 0.434);
   color: #04AA6D;
   border: 2px solid #04AA6D;
 }
