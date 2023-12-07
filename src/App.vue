@@ -12,7 +12,7 @@ const tabQuestions = ref(
         score : {environnement:1, finance:0, confort:1}
     },{
         id_reponse : 2,
-        reponse : "COUCOU",
+        reponse : "Test",
         score : {environnement:1, finance:0, confort:1}
     },{
         id_reponse : 3,
@@ -91,7 +91,7 @@ function modifScore(question_id, reponse_id){
 </script>
 
 <template>
-  <DocumentComp @modif-score="modifScore" :data="dataQuestion"></DocumentComp>
+  <DocumentComp @modif-score="modifScore" :question="dataQuestion"></DocumentComp>
 </template>
 
 <style scoped>
