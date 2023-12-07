@@ -32,10 +32,10 @@ defineProps({
 </script>
 
 <template>
-    <div class="global">
+     <div v-if="question">
+        <div class="global">
         <div class="document">
             <h2 class="main-text">{{ question.question }}</h2>
-
 
             <div class="reponses">
                 <h3>Réponses</h3>
@@ -49,6 +49,10 @@ defineProps({
          
         </div>
     </div>
+  </div>
+  <div v-else>
+    Loading or placeholder content...
+  </div>
 </template>
 
 <style>

@@ -1,64 +1,11 @@
 <script setup>
 import DocumentComp from './components/DocumentComp.vue'
-import { ref } from 'vue';
-const tabQuestions = ref(
-  [{
-    id_question: 1,
-    question : "Quel est la bonne réponse ? (A)",
-    explication : "A est toujours la meilleur réponse",
-    reponses : [{
-        id_reponse : 1,
-        reponse : "A",
-        score : {environnement:1, finance:0, confort:1}
-    },{
-        id_reponse : 2,
-        reponse : "Test",
-        score : {environnement:1, finance:0, confort:1}
-    },{
-        id_reponse : 3,
-        reponse : "toto",
-        score : {environnement:1, finance:0, confort:1}
-      }
-    ]},
-    {
-    id_question: 2,
-    question : "Quel est la bonne réponse ? (B)",
-    explication : "A est toujours la meilleur réponse",
-    reponses : [{
-        id_reponse : 1,
-        reponse : "B",
-        score : {environnement:1, finance:0, confort:1}
-    },{
-        id_reponse : 2,
-        reponse : "B2",
-        score : {environnement:1, finance:0, confort:1}
-    },{
-        id_reponse : 3,
-        reponse : "B3",
-        score : {environnement:1, finance:0, confort:1}
-      }
-    ]},
-    {
-    id_question: 3,
-    question : "Quel est la bonne réponse ? (C)",
-    explication : "A est toujours la meilleur réponse",
-    reponses : [{
-        id_reponse : 1,
-        reponse : "C",
-        score : {environnement:1, finance:0, confort:1}
-    },{
-        id_reponse : 2,
-        reponse : "C2",
-        score : {environnement:1, finance:0, confort:1}
-    },{
-        id_reponse : 3,
-        reponse : "C3",
-        score : {environnement:1, finance:0, confort:1}
-      }
-      ]},
-  ]);
+import { ref, onMounted } from 'vue';
+import storie from './Stories.json'
 
-var dataQuestion = ref(tabQuestions.value[0]);
+var tabQuestions = storie.Sarah.questions
+var dataQuestion = ref(tabQuestions[0]);
+
 
 const tabScore = ref([
   { key: 'environnement', value:0 },
@@ -67,26 +14,12 @@ const tabScore = ref([
 ]);
 
 function modifScore(question_id, reponse_id){
-  //console.log(tabQuestions.value[question_id])
-  const question = tabQuestions.value[question_id];
-  /*
-  if (!question) {
-    console.error('Question non trouvée pour l\'ID :', question_id);
-    return;
-  }
-  */
-  const reponse = question.reponses[reponse_id-1];
-  /*
-  if (!reponse) {
-    console.error('Réponse non trouvée pour l\'ID :', reponse_id);
-    return;
-  }
-  */
-  tabScore.value[0].value += reponse.score.environnement;
-  tabScore.value[1].value += reponse.score.finance;
-  tabScore.value[2].value += reponse.score.confort;
-  dataQuestion.value = tabQuestions.value[ question_id +1 ];
-  console.log( tabScore );
+const question = tabQuestions.find(elt => elt.id_question == question_id)
+const reponse = question.reponses.find(elt => elt.id_reponse == reponse_id)
+tabScore.value[0].value += reponse.score.environnement;
+tabScore.value[1].value += reponse.score.finance;
+tabScore.value[2].value += reponse.score.confort;
+dataQuestion.value = tabQuestions[ question_id ];
 }
 </script>
 
