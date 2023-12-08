@@ -4,7 +4,7 @@ defineProps({
     question: Object
 })
 
-var day = 1
+var day = 0
 function goNextDay() {
     let global = document.querySelector('.global')  
     let blackscreen = document.querySelector('.blackscreen')
@@ -150,6 +150,7 @@ width: 100%;
   background-color: rgba(238, 228, 228, 0.434);
   color: #04AA6D;
   border: 2px solid #04AA6D;
+  cursor: pointer;
 }
 
 
