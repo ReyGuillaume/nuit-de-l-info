@@ -150,6 +150,7 @@ width: 100%;
   background-color: rgba(238, 228, 228, 0.434);
   color: #04AA6D;
   border: 2px solid #04AA6D;
+  cursor: pointer;
 }
 
 
