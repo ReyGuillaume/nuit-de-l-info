@@ -1,34 +1,8 @@
 <script setup>
-import { ref  } from "vue";
-// une question reçu par la page
 
 defineProps({
     question: Object
 })
-
-
-//console.log(question)
-
-// const question = ref({
-//     id_question: 1,
-//     question : "Quel est la bonne réponse ? (A)",
-//     explication : "A est toujours la meilleur réponse",
-//     reponses : [{
-//         id_reponse : 1,
-//         reponse : "A",
-//         exemplevar1 : -2
-//     },{
-//         id_reponse : 2,
-//         reponse : "COUCOU",
-//         exemplevar1 : -2
-//     },{
-//         id_reponse : 3,
-//         reponse : "toto",
-//         exemplevar1 : -2
-//     }]
-// });
-
-
 
 </script>
 
@@ -36,7 +10,7 @@ defineProps({
      <div v-if="question">
         <div class="global">
         <div class="document">
-            <h2 class="main-text">{{ question.question }}</h2>
+            <h2 class="main-text" v-html="question.question"></h2>
 
             <div class="reponses">
                 <div class="reponse" v-for="item of question.reponses" :key="item.id" >
@@ -49,9 +23,6 @@ defineProps({
          
         </div>
     </div>
-  </div>
-  <div v-else>
-    Loading or placeholder content...
   </div>
 </template>
 
@@ -68,7 +39,7 @@ defineProps({
     animation: onHoverIcon .5s;
 }
 .document {
-    width: calc(210 * .25vh);
+    width: calc(250 * .25vh);
     min-height: calc(297 * .25vh);
     background-color: #fffbfb;
     background-color: rgba(238, 228, 228, 0.896);
@@ -77,6 +48,7 @@ defineProps({
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
 }
 
 .main-text {
@@ -86,8 +58,12 @@ defineProps({
 .reponses {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    flex-wrap: nowrap;
+    justify-content: space-around;
     align-items: center;
+
+    padding-top: 1em;
+
 }
 
 .reponse {
@@ -96,6 +72,8 @@ defineProps({
     width: 8rem;
     margin-bottom: 1rem;
 
+width: 100%;
+
 }
 
 .reponse button {
@@ -103,13 +81,20 @@ defineProps({
     color: white;
     border: 2px solid #04AA6D;
     border-radius: 4px;
+    /*
     padding: 15px 32px;
+    */
+
+    padding: 1em;
+
     text-align: center;
     text-decoration: none;
     font-size: 16px;
     transition-duration: 0.4s;
     width: 100%;
     font-family: 'Courier New', Courier, monospace;
+
+    word-break: break-word;
 
 }
 
@@ -118,7 +103,6 @@ defineProps({
   color: #04AA6D;
   border: 2px solid #04AA6D;
 }
-
 
 
 @keyframes onHoverIcon {
