@@ -1,6 +1,8 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import DocumentComp from './components/DocumentComp.vue'
+import Bilan from './components/Bilan.vue'
+
 import { ref } from 'vue';
 const tabQuestions = ref(
   [{
@@ -10,15 +12,15 @@ const tabQuestions = ref(
     reponses : [{
         id_reponse : 1,
         reponse : "A",
-        score : {environnement:1, finance:0, confort:1}
+        score : {environnement:4, finance:3, confort:1}
     },{
         id_reponse : 2,
         reponse : "COUCOU",
-        score : {environnement:1, finance:0, confort:1}
+        score : {environnement:1, finance:-3, confort:1}
     },{
         id_reponse : 3,
         reponse : "toto",
-        score : {environnement:1, finance:0, confort:1}
+        score : {environnement:1, finance:0, confort:4}
       }
     ]},
     {
@@ -66,6 +68,7 @@ const tabScore = ref([
   { key: 'finance', value: 0 },
   { key: 'confort', value: 0 }
 ]);
+const fin = ref(false)
 
 function modifScore(question_id, reponse_id){
   //console.log(tabQuestions.value[question_id])
@@ -87,12 +90,14 @@ function modifScore(question_id, reponse_id){
   tabScore.value[1].value += reponse.score.finance;
   tabScore.value[2].value += reponse.score.confort;
   dataQuestion.value = tabQuestions.value[ question_id +1 ];
-  console.log( tabScore );
+  fin.value = question_id + 1 >= tabQuestions.value.length;
+  console.log( question_id +1 );
 }
 </script>
 
 <template>
-  <DocumentComp @modif-score="modifScore" :data="dataQuestion"></DocumentComp>
+  <DocumentComp @modif-score="modifScore" :data="dataQuestion" v-if="fin"></DocumentComp>
+  <Bilan v-if="!fin" :tabScore="tabScore" :tabQuestions="tabQuestions"></Bilan>
 </template>
 
 <style scoped>
