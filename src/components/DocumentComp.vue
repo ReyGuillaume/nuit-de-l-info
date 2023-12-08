@@ -9,12 +9,18 @@ function goNextDay() {
     let global = document.querySelector('.global')  
     let blackscreen = document.querySelector('.blackscreen')
     day++
+    blackscreen.style.zIndex = '3'
     blackscreen.classList.add('show')
     global.style.display = 'none'
     setTimeout(() => {
         blackscreen.classList.remove('show')
         global.style.display = 'flex'
-    }, 2000)
+    }, 3000)
+    setTimeout(() => {
+        blackscreen.style.zIndex = '1'
+    }, 5800)
+    // wait 3s before removing z-index
+
 }
 </script>
 
@@ -49,18 +55,17 @@ function goNextDay() {
     left: 0;
     width: 100vw;
     height: 100vh;
-
     background-color: black;
     color: white;
 
     display: flex;
     align-items: center;
     justify-content: center;
-
+    z-index: 1;
     font-size: 5em;
 
     opacity: 0;
-    transition: opacity .5s;
+    transition: opacity 3s;
 }
 
 .blackscreen.show {

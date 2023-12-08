@@ -111,7 +111,7 @@ function modifScore(question_id, reponse_id) {
 const lampOn = ref(false);
 
 function toogleLamp(){
-  if (window.innerWidth >= 1500 && window.innerHeight >= 700){
+  if (window.innerWidth >= 1400 && window.innerHeight >= 600){
     lampOn.value = !lampOn.value;
   }
 }
@@ -222,7 +222,7 @@ const img = Math.floor(Math.random() * 2) == 0 ? bg1 : bg2;
 
 #lamp{
   position: absolute;
-  width: 2rem;
+  width: 3rem;
   height: 2rem;
   left: 9.3rem;
   bottom: 10rem;
