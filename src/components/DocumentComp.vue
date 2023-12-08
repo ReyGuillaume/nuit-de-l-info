@@ -36,7 +36,7 @@ defineProps({
      <div v-if="question">
         <div class="global">
         <div class="document">
-            <h2 class="main-text">{{ question.question }}</h2>
+            <h2 class="main-text" v-html="question.question"></h2>
 
             <div class="reponses">
                 <div class="reponse" v-for="item of question.reponses" :key="item.id" >

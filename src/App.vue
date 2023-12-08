@@ -1,8 +1,9 @@
 <script setup>
 import DocumentComp from './components/DocumentComp.vue'
+import Bilan from './components/Bilan.vue'
+
 import { ref, onMounted } from 'vue';
 import storie from './Stories.json'
-
 import fg1 from '../images/bureau1.png'
 import bg1 from '../images/background1.png'
 import bg2 from '../images/background2.png'
@@ -16,6 +17,7 @@ const tabScore = ref([
   { key: 'finance', value: 0 },
   { key: 'confort', value: 0 }
 ]);
+const fin = ref(false)
 
 
 // Modifie le score
@@ -29,7 +31,9 @@ tabScore.value[1].value += reponse.score.finance;
 tabScore.value[2].value += reponse.score.confort;
 
 questionRepondu.push(reponse_id)
+console.log(tabScore)
 dataQuestion.value = tabQuestions[ question_id ];
+fin.value = question_id >= tabQuestions.length
 var fin = false;
 var i = 1;
 while(!fin){
@@ -55,6 +59,8 @@ const img = Math.floor(Math.random() * 2) == 0 ? bg1 : bg2
     <img :src="img" alt="" class="background">
   </div>
   <DocumentComp @modif-score="modifScore" :question="dataQuestion"></DocumentComp>
+  <Bilan v-if="fin" :tabQuestions="tabQuestions" :tabScore="tabScore"></Bilan>
+
 </template>
 
 <style scoped>
