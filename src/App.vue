@@ -132,6 +132,7 @@ function saut_question(fin, dataQuestion, questionRepondu, question_id){
     if (dataQuestion.value.require != null) {
       if (!questionRepondu.find((elt) => elt == dataQuestion.value.require)) {
         dataQuestion.value = tabQuestions[question_id + i];
+        fin.value = question_id + i >= tabQuestions.length
       } else {
         require_find = true;
       }
@@ -141,7 +142,6 @@ function saut_question(fin, dataQuestion, questionRepondu, question_id){
     console.log("question_id + i", question_id + i)
     console.log("tabQuestions.length", tabQuestions.length)
     i++;
-    fin.value = question_id + i >= tabQuestions.length
 
   }
 }

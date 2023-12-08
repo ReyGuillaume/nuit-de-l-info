@@ -38,7 +38,6 @@ function goNextDay() {
                         <button
                         @click="goNextDay(); $emit('modifScore', question.id_question, item.id_reponse)">
                             {{ item.reponse }}
-                        
                         </button>
                     </div>
                 </div>
