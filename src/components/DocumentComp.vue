@@ -37,6 +37,7 @@ defineProps({
     align-items: center;
     justify-content: center;
     animation: onHoverIcon .5s;
+    z-index: 2;
 }
 .document {
     width: calc(250 * .25vh);
