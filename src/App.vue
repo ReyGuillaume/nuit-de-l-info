@@ -36,6 +36,7 @@ function modifScore(question_id, reponse_id) {
   questionRepondu.push(reponse_id);
   dataQuestion.value = tabQuestions[question_id];
   fin.value = question_id >= tabQuestions.length;
+  dataQuestion.value.reponses = saut_reponse(dataQuestion, questionRepondu)
   saut_question(fin, dataQuestion, questionRepondu, question_id)
 }
 
@@ -58,7 +59,31 @@ function saut_question(fin, dataQuestion, questionRepondu, question_id){
   }
 }
 
-console.log(tabScore)
+function arrayRemove(arr, value) { 
+  let new_arr = []
+  for (var i in arr) {
+    if (arr[i] != value) {
+      new_arr.push(arr[i])
+    }
+  }
+  return new_arr
+} 
+
+function saut_reponse(dataQuestion, questionRepondu){
+  var reponse_arr = []
+    for (var reponse in dataQuestion.value.reponses) {
+      var requiredReponse = dataQuestion.value.reponses[reponse].require
+      if (requiredReponse != null) {
+        if (questionRepondu.find((elt) => elt == requiredReponse)) {
+          reponse_arr.push(dataQuestion.value.reponses[reponse])
+        }
+      } else {
+        reponse_arr.push(dataQuestion.value.reponses[reponse])
+      }
+    }
+    return reponse_arr
+}
+
 const img = Math.floor(Math.random() * 2) == 0 ? bg1 : bg2;
 </script>
 
