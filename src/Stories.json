@@ -3,7 +3,7 @@
         "questions":[
             {
                 "id_question" : 1,
-                "question" : "Bonjour Sarah, <br> Je suis très heureuse de savoir que tu as été accepté à l'université ! <br> En plus tu es dans la même classe que ton amie Léa cette année, génial ! <br> Je te souhaite plein de bonheur ! <br> Maman.",
+                "question" : "Bonjour Sarah,  Je suis très heureuse de savoir que tu as été accepté à l'université ! <br> En plus tu es dans la même classe que ton amie Léa cette année, génial !<br> Je te souhaite plein de bonheur !  Maman.",
                 "explication" : "",
                 "require" : null,
                 "reponses" : [
@@ -24,37 +24,37 @@
                     {
                     "id_reponse" : "2_1",
                     "reponse" : "Utiliser la voiture de mes parents",
-                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "score" : {"environnement" : -2, "finance" : -1, "confort" : 1},
                     "require" : null
                 },
                 {
                     "id_reponse" : "2_2",
                     "reponse" : "Prendre le bus",
-                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "score" : {"environnement" : 2, "finance" : 1, "confort" : -2},
                     "require" : null
                 },
                 {
                     "id_reponse" : "2_3",
                     "reponse" : "Acheter ma propre voiture à essence",
-                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "score" : {"environnement" : -4, "finance" : -4, "confort" : 2},
                     "require" : null
                 },
                 {
                     "id_reponse" : "2_4",
                     "reponse" : "Acheter ma propre voiture électrique",
-                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "score" : {"environnement" : -2, "finance" : -5, "confort" : 2},
                     "require" : null
                 },
                 {
                     "id_reponse" : "2_5",
                     "reponse" : "Prendre mon vélo",
-                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "score" : {"environnement" : 3, "finance" : 1, "confort" : -4},
                     "require" : null
                 },
                 {
                     "id_reponse" : "2_6",
                     "reponse" : "Demander à Léa de m'emmener",
-                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "score" : {"environnement" : 1, "finance" : 1, "confort" : -1},
                     "require" : null
                 }
             ]
@@ -68,19 +68,19 @@
                     {
                     "id_reponse" : "3_1",
                     "reponse" : "« Alp’Gliss », une association de ski",
-                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "score" : {"environnement" : -1, "finance" : -1, "confort" : 0},
                     "require" : null
                 },
                 {
                     "id_reponse" : "3_2",
                     "reponse" : "« Tous en sleep », une association de développeurs",
-                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "score" : {"environnement" : -1, "finance" : -1, "confort" : 0},
                     "require" : null
                 },
                 {
                     "id_reponse" : "3_3",
                     "reponse" : "« Un câlin pour les marins », une association qui défend les droits des marins de Savoie",
-                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "score" : {"environnement" : 1, "finance" : -1, "confort" : -2},
                     "require" : null
                 },
                 {
@@ -93,7 +93,7 @@
             },
             {
                 "id_question" : 4,
-                "question" : "Salut Sarah c'est Léa ! Est-ce que tu veux venir au restaurant avec moi demain midi ?",
+                "question" : "Salut Sarah c'est Léa ! <br> Est-ce que tu veux venir au restaurant avec moi demain midi ?",
                 "explication" : "",
                 "require" : null,
                 "reponses" : [
@@ -106,7 +106,7 @@
                 {
                     "id_reponse" : "4_2",
                     "reponse" : "Non",
-                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : -1},
                     "require" : null
                 }
             ]
@@ -120,19 +120,19 @@
                     {
                     "id_reponse" : "5_1",
                     "reponse" : "Prendre du poisson",
-                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "score" : {"environnement" : -2, "finance" : -2, "confort" : 2},
                     "require" : null
                 },
                 {
                     "id_reponse" : "5_2",
                     "reponse" : "Prendre de la viande",
-                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "score" : {"environnement" : -3, "finance" : -3, "confort" : 3},
                     "require" : null
                 },
                 {
                     "id_reponse" : "5_3",
                     "reponse" : "Prendre une salade",
-                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                    "score" : {"environnement" : 0, "finance" : -1, "confort" : 1},
                     "require" : null
                 }
             ]
@@ -171,7 +171,7 @@
             },
             {
                 "id_question" : 7,
-                "question" : "C'est la fin du premier semestre <br> Mes parents ont reçus une proposition pour l'installation d'une nouvelle chaudière à fioul. <br> Ils m'ont dit qu'elle consommerait deux fois moins que l'ancienne.",
+                "question" : "C'est la fin du premier semestre <br> Mes parents ont reçus une proposition pour l'installation d'une nouvelle chaudière à fioul. <br>Ils m'ont dit qu'elle consommerait deux fois moins que l'ancienne.",
                 "explication" : "",
                 "require" : null,
                 "reponses" : [
@@ -203,7 +203,7 @@
             },
             {
                 "id_question" : 8,
-                "question" : "C'est les vacances ! <br> Qu'est-ce que je vais faire ?",
+                "question" : "C'est les vacances !  Qu'est-ce que je vais faire ?",
                 "explication" : "",
                 "require" : null,
                 "reponses" : [
@@ -273,7 +273,7 @@
             },             
             {
                 "id_question" : 10,
-                "question" : "Salut Sarah c'est encore Léa ! Est-ce que tu veux venir au restaurant avec moi demain midi ? <br> J'en connais un autre qui serait super !",
+                "question" : "Salut Sarah c'est encore Léa ! <br>Est-ce que tu veux venir au restaurant avec moi demain midi ? <br>J'en connais un autre qui serait super !",
                 "explication" : "",
                 "require" : null,
                 "reponses" : [
@@ -319,7 +319,7 @@
             },
             {
                 "id_question" : 12,
-                "question" : "Bonjour, <br> Ceci est une message de la mairie <br> A partir de maintenant les utilisateurs de voitures thermique se verront attribuer une aide financière pour acheter une voiture électrique",
+                "question" : "Bonjour, <br>Ceci est une message de la mairie  A partir de maintenant les utilisateurs de voitures thermique se verront attribuer une aide financière pour acheter une voiture électrique",
                 "explication" : "",
                 "require" : "2_3",
                 "reponses" : [
@@ -339,9 +339,9 @@
             },
             {
                 "id_question" : 13,
-                "question" : "Le second semestre a commencé ! <br> Et l'hiver aussi :(",
+                "question" : "Le second semestre a commencé !  Et l'hiver aussi :(",
                 "explication" : "",
-                "require" : "7_4",
+                "require" : null,
                 "reponses" : [
                     {
                     "id_reponse" : "13_1",
@@ -377,42 +377,122 @@
             },
             {
                 "id_question" : 14,
-                "question" : "Le second semestre a commencé ! <br> Et l'hiver aussi :(",
+                "question" : "La nouvelle chaudière de mes parents est géniale mais cet hiver le prix du fioul a augmenté. <br>Du coup, les économies ne sont vraiment pas aussi bonnes que prévues",
                 "explication" : "",
                 "require" : "7_1",
                 "reponses" : [
                     {
                     "id_reponse" : "14_1",
-                    "reponse" : "Mettre mon chauffage à 18°C",
+                    "reponse" : "Baisser le chauffage",
                     "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
                    "require" : null
                 },
                 {
                     "id_reponse" : "14_2",
-                    "reponse" : "Mettre mon chauffage à 19°C",
+                    "reponse" : "Laisser le chauffage à la même température",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                   "require" : null
+                }
+            ]
+            },
+            {
+                "id_question" : 15,
+                "question" : "Bonjour, je suis votre voisin ! <br>J'ai vu que vous aviez une voiture dans votre allée, est-ce que je pourrais l'emprunter ce week-end ?",
+                "explication" : "",
+                "require" : null,
+                "reponses" : [
+                    {
+                    "id_reponse" : "15_1",
+                    "reponse" : "Oui bien sûr !",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                   "require" : null
+                },
+                {
+                    "id_reponse" : "15_2",
+                    "reponse" : "Absolument pas !",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                   "require" : null
+                }
+            ]
+            },
+            {
+                "id_question" : 16,
+                "question" : "Re-bonjour, c'est toujours votre voisin ! <br>Merci d'avoir prêté la voiture ! Vous m'avez sauvé la vie !",
+                "explication" : "",
+                "require" : "15_1",
+                "reponses" : [
+                    {
+                    "id_reponse" : "16_1",
+                    "reponse" : "Avec plaisir, vous pouvez l'utiliser à nouveau si vous en avez besoin !",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                   "require" : null
+                },
+                {
+                    "id_reponse" : "16_2",
+                    "reponse" : "Avec plaisir, c'était tout de même exceptionnel",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                   "require" : null
+                },
+                {
+                    "id_reponse" : "16_3",
+                    "reponse" : "De rien mais je regrette...",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                   "require" : null  
+                }
+            ]
+            },
+            {
+                "id_question" : 17,
+                "question" : "Salut Saraaaaah ! Je suis trop contente ! <br>Viens on va au restau !",
+                "explication" : "",
+                "require" : null,
+                "reponses" : [
+                    {
+                    "id_reponse" : "17_1",
+                    "reponse" : "Ouais ! Trop génial, ou ça ?",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                   "require" : null
+                },
+                {
+                    "id_reponse" : "17_2",
+                    "reponse" : "Viens plutôt à la maison, je vais faire à manger !",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                   "require" : null
+                },
+                {
+                    "id_reponse" : "17_3",
+                    "reponse" : "Désolée, j'ai pas trop envie",
+                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
+                   "require" : null  
+                }
+            ]
+            },
+            {
+                "id_question" : 18,
+                "question" : "Menu du restaurant",
+                "explication" : "",
+                "require" : "17_1",
+                "reponses" : [
+                    {
+                    "id_reponse" : "18_1",
+                    "reponse" : "Prendre du poisson",
                     "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
                     "require" : null
                 },
                 {
-                    "id_reponse" : "14_3",
-                    "reponse" : "Mettre mon chauffage à 20°C",
+                    "id_reponse" : "18_2",
+                    "reponse" : "Prendre de la viande",
                     "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
                     "require" : null
                 },
                 {
-                    "id_reponse" : "14_3",
-                    "reponse" : "Mettre mon chauffage à 21°C",
-                    "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
-                    "require" : null
-                },
-                {
-                    "id_reponse" : "14_3",
-                    "reponse" : "Mettre mon chauffage à 22°C",
+                    "id_reponse" : "18_3",
+                    "reponse" : "Prendre une salade",
                     "score" : {"environnement" : 0, "finance" : 0, "confort" : 0},
                     "require" : null
                 }
             ]
-            }  
+            }
         ]
     }
 }
