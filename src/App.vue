@@ -12,10 +12,67 @@ import bg3 from '../images/bg3.png'
 import bg4 from '../images/bg4.png'
 import bg5 from '../images/bg5.png'
 import bg6 from '../images/bg6.png'
+import charlie from '../images/charlie.png'
 
 var tabQuestions = storie.Sarah.questions;
 var dataQuestion = ref(tabQuestions[0]);
 var questionRepondu = [];
+const maxEnvironnement = ref(0);
+const maxFinance = ref(0);
+const maxConfort = ref(0);
+
+const minEnvironnement = ref(0);
+const minFinance = ref(0);
+const minConfort = ref(0);
+
+const pourcentageEnvironnement = ref(0);
+const pourcentageFinance = ref(0);
+const pourcentageConfort = ref(0);
+for (let i = 0; i<tabQuestions.length; i++){
+    let maxEnvironnementQuestion = tabQuestions[i].reponses[0].score["environnement"];
+    let maxFinanceQuestion = tabQuestions[i].reponses[0].score["finance"];
+    let maxConfortQuestion = tabQuestions[i].reponses[0].score["confort"];
+    for (let j = 1; j <tabQuestions[i].reponses.length; j++){
+
+
+        if(tabQuestions[i].reponses[j].score["environnement"] > maxEnvironnementQuestion){
+            maxEnvironnementQuestion = tabQuestions[i].reponses[j].score["environnement"];
+        }
+        if(tabQuestions[i].reponses[j].score["finance"] > maxFinanceQuestion){
+            maxFinanceQuestion = tabQuestions[i].reponses[j].score["finance"];
+        }
+        if(tabQuestions[i].reponses[j].score["confort"] > maxConfortQuestion){
+            maxConfortQuestion = tabQuestions[i].reponses[j].score["confort"];
+        }
+    }
+    maxEnvironnement.value += maxEnvironnementQuestion;
+    maxFinance.value += maxFinanceQuestion;
+    maxConfort.value += maxConfortQuestion;
+}
+for (let i = 0; i<tabQuestions.length; i++){
+    let minEnvironnementQuestion = tabQuestions[i].reponses[0].score["environnement"];
+    let minFinanceQuestion = tabQuestions[i].reponses[0].score["finance"];
+    let minConfortQuestion = tabQuestions[i].reponses[0].score["confort"];
+    for (let j = 1; j <tabQuestions[i].reponses.length; j++){
+
+
+        if(tabQuestions[i].reponses[j].score["environnement"] < minEnvironnementQuestion){
+            minEnvironnementQuestion = tabQuestions[i].reponses[j].score["environnement"];
+        }
+        if(tabQuestions[i].reponses[j].score["finance"] < minFinanceQuestion){
+            minFinanceQuestion = tabQuestions[i].reponses[j].score["finance"];
+        }
+        if(tabQuestions[i].reponses[j].score["confort"] < minConfortQuestion){
+            minConfortQuestion = tabQuestions[i].reponses[j].score["confort"];
+        }
+    }
+    minEnvironnement.value += minEnvironnementQuestion;
+    minFinance.value += minFinanceQuestion;
+    minConfort.value += minConfortQuestion;
+    
+}
+
+
 
 const tabScore = ref([
   { key: "environnement", value: 0 },
@@ -33,6 +90,13 @@ function modifScore(question_id, reponse_id) {
   tabScore.value[0].value += reponse.score.environnement;
   tabScore.value[1].value += reponse.score.finance;
   tabScore.value[2].value += reponse.score.confort;
+  pourcentageEnvironnement.value = (100 /(maxEnvironnement.value - minEnvironnement.value)) * (tabScore.value[0].value - minEnvironnement.value);
+  pourcentageFinance.value = (100 /(maxFinance.value - minFinance.value)) * (tabScore.value[1].value - minFinance.value);
+  pourcentageConfort.value = (100 /(maxConfort.value - minConfort.value)) * (tabScore.value[2].value - minConfort.value);
+  console.log(pourcentageEnvironnement.value)
+  console.log(pourcentageFinance.value)
+  console.log(pourcentageConfort.value)
+
 
   questionRepondu.push(reponse_id);
   dataQuestion.value = tabQuestions[question_id];
@@ -112,6 +176,7 @@ const img = Math.floor(Math.random() * 2) == 0 ? bg1 : bg2;
     <div id="lamp" @click="toogleLamp"></div>
     <div v-if="lampOn" class="lampon"></div>
     <img :src="fg1" alt="" class="foreground">
+    <img :src="charlie"  alt="" class="charlie">
     <img :src="img" alt="" class="background">
   </div>
   <DocumentComp
@@ -126,8 +191,28 @@ const img = Math.floor(Math.random() * 2) == 0 ? bg1 : bg2;
   position: absolute;
   width: 100vw;
   height: auto;
-
+  z-index: 2;
   bottom: 0px;
+}
+.charlie {
+  position: absolute;
+  z-index: 1;
+  top: 10%;
+  left: -20%;
+  animation: charlieAnime linear 500s infinite;
+  opacity: 0.1;
+
+}
+
+@keyframes charlieAnime {
+  0%{
+    left : -45%;
+    opacity: 0.05;
+  }
+  100%{
+    left : 100%;
+    opacity: 0.2;
+  }
 }
 .background {
   position: absolute;
