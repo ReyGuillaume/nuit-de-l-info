@@ -1,34 +1,8 @@
 <script setup>
-import { ref  } from "vue";
-// une question reçu par la page
 
 defineProps({
     question: Object
 })
-
-
-//console.log(question)
-
-// const question = ref({
-//     id_question: 1,
-//     question : "Quel est la bonne réponse ? (A)",
-//     explication : "A est toujours la meilleur réponse",
-//     reponses : [{
-//         id_reponse : 1,
-//         reponse : "A",
-//         exemplevar1 : -2
-//     },{
-//         id_reponse : 2,
-//         reponse : "COUCOU",
-//         exemplevar1 : -2
-//     },{
-//         id_reponse : 3,
-//         reponse : "toto",
-//         exemplevar1 : -2
-//     }]
-// });
-
-
 
 </script>
 
@@ -63,6 +37,7 @@ defineProps({
     align-items: center;
     justify-content: center;
     animation: onHoverIcon .5s;
+    z-index: 2;
 }
 .document {
     width: calc(250 * .25vh);
