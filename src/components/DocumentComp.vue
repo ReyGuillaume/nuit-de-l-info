@@ -4,7 +4,7 @@ defineProps({
     question: Object
 })
 
-var day = 1
+var day = 0
 function goNextDay() {
     let global = document.querySelector('.global')  
     let blackscreen = document.querySelector('.blackscreen')

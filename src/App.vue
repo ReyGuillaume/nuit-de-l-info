@@ -102,7 +102,7 @@ function modifScore(question_id, reponse_id) {
 
   questionRepondu.push(reponse_id);
   dataQuestion.value = tabQuestions[question_id];
-  fin.value = question_id > tabQuestions.length;
+  fin.value = question_id >= tabQuestions.length;
   if(!fin.value){
     dataQuestion.value.reponses = saut_reponse(dataQuestion, questionRepondu)
     saut_question(fin, dataQuestion, questionRepondu, question_id)
