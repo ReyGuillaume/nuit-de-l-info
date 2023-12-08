@@ -68,7 +68,7 @@ defineProps({
     animation: onHoverIcon .5s;
 }
 .document {
-    width: calc(210 * .25vh);
+    width: calc(250 * .25vh);
     min-height: calc(297 * .25vh);
     background-color: #fffbfb;
     background-color: rgba(238, 228, 228, 0.896);
@@ -77,6 +77,7 @@ defineProps({
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
 }
 
 .main-text {
@@ -86,8 +87,12 @@ defineProps({
 .reponses {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    flex-wrap: nowrap;
+    justify-content: space-around;
     align-items: center;
+
+    padding-top: 1em;
+
 }
 
 .reponse {
@@ -96,6 +101,8 @@ defineProps({
     width: 8rem;
     margin-bottom: 1rem;
 
+width: 100%;
+
 }
 
 .reponse button {
@@ -103,13 +110,20 @@ defineProps({
     color: white;
     border: 2px solid #04AA6D;
     border-radius: 4px;
+    /*
     padding: 15px 32px;
+    */
+
+    padding: 1em;
+
     text-align: center;
     text-decoration: none;
     font-size: 16px;
     transition-duration: 0.4s;
     width: 100%;
     font-family: 'Courier New', Courier, monospace;
+
+    word-break: break-word;
 
 }
 
@@ -118,7 +132,6 @@ defineProps({
   color: #04AA6D;
   border: 2px solid #04AA6D;
 }
-
 
 
 @keyframes onHoverIcon {
