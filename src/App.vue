@@ -109,9 +109,8 @@ const img = Math.floor(Math.random() * 2) == 0 ? bg1 : bg2;
 <template>
   
   <div class="back">
-
     <div id="lamp" @click="toogleLamp"></div>
-  <div v-if="lampOn" class="lampon"></div>
+    <div v-if="lampOn" class="lampon"></div>
     <img :src="fg1" alt="" class="foreground">
     <img :src="img" alt="" class="background">
   </div>
