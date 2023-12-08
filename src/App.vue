@@ -2,6 +2,8 @@
 
 import DocumentComp from './components/DocumentComp.vue'
 import Bilan from "./components/Bilan.vue";
+import Pourcentage from "./components/Pourcentage.vue";
+
 import { ref, onMounted, onUnmounted } from 'vue';
 
 import storie from './Stories.json'
@@ -185,6 +187,8 @@ const img = Math.floor(Math.random() * 2) == 0 ? bg1 : bg2;
     :question="dataQuestion"
   ></DocumentComp>
   <Bilan v-if="fin" :tabQuestions="tabQuestions" :tabScore="tabScore"></Bilan>
+  <Pourcentage v-if="pourcentageConfort && !fin" :pourcentageConfort="pourcentageConfort" :pourcentageEnvironnement="pourcentageEnvironnement" :pourcentageFinance="pourcentageFinance"></Pourcentage>
+
 </template>
 
 <style scoped>
