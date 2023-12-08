@@ -15,10 +15,10 @@ function goNextDay() {
     setTimeout(() => {
         blackscreen.classList.remove('show')
         global.style.display = 'flex'
-    }, 3000)
+    }, 2000)
     setTimeout(() => {
         blackscreen.style.zIndex = '1'
-    }, 5800)
+    }, 4800)
     // wait 3s before removing z-index
 
 }

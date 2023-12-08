@@ -18,6 +18,7 @@ import charlie from '../images/charlie.png'
 
 var tabQuestions = storie.Sarah.questions;
 var dataQuestion = ref(tabQuestions[0]);
+const img = ref([bg1]);
 var questionRepondu = [];
 const maxEnvironnement = ref(0);
 const maxFinance = ref(0);
@@ -97,13 +98,15 @@ function modifScore(question_id, reponse_id) {
   pourcentageConfort.value = (100 /(maxConfort.value - minConfort.value)) * (tabScore.value[2].value - minConfort.value);
 
 
+
   questionRepondu.push(reponse_id);
   dataQuestion.value = tabQuestions[question_id];
-  fin.value = question_id >= tabQuestions.length;
+  fin.value = question_id > tabQuestions.length;
   if(!fin.value){
     dataQuestion.value.reponses = saut_reponse(dataQuestion, questionRepondu)
     saut_question(fin, dataQuestion, questionRepondu, question_id)
   }
+  img.value = 背景(pourcentageEnvironnement.value, bg1,bg3,bg5,bg6)
 }
 
 
@@ -139,8 +142,7 @@ function saut_question(fin, dataQuestion, questionRepondu, question_id){
     } else {
       require_find = true;
     }
-    console.log("question_id + i", question_id + i)
-    console.log("tabQuestions.length", tabQuestions.length)
+
     i++;
 
   }
@@ -161,7 +163,23 @@ function saut_reponse(dataQuestion, questionRepondu){
     return reponse_arr
 }
 
-const img = Math.floor(Math.random() * 2) == 0 ? bg1 : bg2;
+function 背景(אהבה,bg1,bg3,bg5,bg6){
+  var img;
+  if(אהבה < 40){
+    img = bg3
+  } else if (אהבה < 50){
+    img = bg5
+  } else if (אהבה < 60){
+    img = bg6
+  } else if (אהבה < 70){
+    img = bg6
+  } else {
+    img = bg1
+  }
+  return img
+}
+
+
 
 </script>
 
