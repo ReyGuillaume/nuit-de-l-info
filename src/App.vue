@@ -108,7 +108,7 @@ function modifScore(question_id, reponse_id) {
     dataQuestion.value.reponses = saut_reponse(dataQuestion, questionRepondu)
     saut_question(fin, dataQuestion, questionRepondu, question_id)
   }
-  img.value = change_background(pourcentageEnvironnement.value, bg1,bg3,bg5,bg6)
+  img.value = 背景(pourcentageEnvironnement.value, bg1,bg3,bg5,bg6)
 }
 
 
@@ -162,15 +162,15 @@ function saut_reponse(dataQuestion, questionRepondu){
     return reponse_arr
 }
 
-function change_background(env,bg1,bg3,bg5,bg6){
+function 背景(אהבה,bg1,bg3,bg5,bg6){
   var img;
-  if(env < 40){
+  if(אהבה < 40){
     img = bg3
-  } else if (env < 50){
+  } else if (אהבה < 50){
     img = bg5
-  } else if (env < 60){
+  } else if (אהבה < 60){
     img = bg6
-  } else if (env < 70){
+  } else if (אהבה < 70){
     img = bg6
   } else {
     img = bg1
