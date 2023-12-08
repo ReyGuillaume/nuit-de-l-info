@@ -3,7 +3,7 @@
         "questions":[
             {
                 "id_question" : 1,
-                "question" : "Bonjour Sarah,  Je suis très heureuse de savoir que tu as été accepté à l'université ! <br> En plus tu es dans la même classe que ton amie Léa cette année, génial !<br> Je te souhaite plein de bonheur !  Maman.",
+                "question" : "Bonjour Sarah,  Je suis très heureuse de savoir que tu as été acceptée à l'université ! <br> En plus tu es dans la même classe que ton amie Léa cette année, génial !<br> Je te souhaite plein de bonheur !  Maman.",
                 "explication" : "",
                 "require" : null,
                 "reponses" : [
@@ -209,7 +209,7 @@
                 "reponses" : [
                     {
                     "id_reponse" : "8_1",
-                    "reponse" : "Aller voir ma soeur qui habite à l'autre bout du pays (3h de train",
+                    "reponse" : "Aller voir ma soeur qui habite à l'autre bout du pays (3h de train)",
                     "score" : {"environnement" : -1, "finance" : -2, "confort" : 2},
                     "require" : null
                 },
@@ -319,7 +319,7 @@
             },
             {
                 "id_question" : 12,
-                "question" : "Bonjour, <br>Ceci est une message de la mairie  A partir de maintenant les utilisateurs de voitures thermique se verront attribuer une aide financière pour acheter une voiture électrique",
+                "question" : "Bonjour, <br>Ceci est un message de la mairie  A partir de maintenant les utilisateurs de voitures thermique se verront attribuer une aide financière pour acheter une voiture électrique",
                 "explication" : "",
                 "require" : "2_3",
                 "reponses" : [
@@ -519,7 +519,7 @@
                 },
                 {
                     "id_reponse" : "19_4",
-                    "reponse" : "Scroller sur TikTok jusqu'à s'endmri...",
+                    "reponse" : "Scroller sur TikTok jusqu'à s'endormir...",
                     "score" : {"environnement" : -1, "finance" : 0, "confort" : 1},
                     "require" : null
                 } 
