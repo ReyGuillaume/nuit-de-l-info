@@ -15,6 +15,7 @@ import bg4 from '../images/bg4.png'
 import bg5 from '../images/bg5.png'
 import bg6 from '../images/bg6.png'
 import charlie from '../images/charlie.png'
+import vitre from '../images/vitre.jpg'
 
 var tabQuestions = storie.Sarah.questions;
 var dataQuestion = ref(tabQuestions[0]);
@@ -179,8 +180,13 @@ function 背景(אהבה,bg1,bg3,bg5,bg6){
   return img
 }
 
+const vitreJ = vitre
 
-
+function vitreClick(){
+  console.log("clique")
+  var image = document.getElementsByClassName("vitre")[0]
+  image.style.display = "block"
+}
 </script>
 
 <template>
@@ -191,6 +197,11 @@ function 背景(אהבה,bg1,bg3,bg5,bg6){
     <img :src="fg1" alt="" class="foreground">
     <img :src="charlie"  alt="" class="charlie">
     <img :src="img" alt="" class="background">
+    <img :src="vitreJ" class="vitreOn" @click="vitreClick"/>
+    <img :src="vitreJ" alt="" class="vitre"/>
+    <img :src="fg1" alt="" class="foreground" />
+    <img :src="img" alt="" class="background" />
+    
   </div>
   <DocumentComp 
     @modif-score="modifScore"
@@ -202,6 +213,24 @@ function 背景(אהבה,bg1,bg3,bg5,bg6){
 </template>
 
 <style scoped>
+
+.vitreOn{
+  position: absolute;
+    z-index: 4;
+    bottom: 421px;
+    right: -364px;
+    opacity: 0;
+    width: 759px;
+}
+.vitre{
+  position: absolute;
+    z-index: 1;
+    bottom: 50%;
+    left: 76%;
+    opacity: 0.33;
+    width: 759px;
+    display: none;
+}
 .foreground {
   position: absolute;
   width: 100vw;
