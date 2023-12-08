@@ -60,19 +60,11 @@ for (let i = 0; i<props.tabQuestions.length; i++){
     
 }
 
-console.log(minEnvironnement.value)
-console.log(minFinance.value)
-console.log(minConfort.value)
-console.log(maxEnvironnement.value)
-console.log(maxFinance.value)
-console.log(maxConfort.value)
 
-pourcentageEnvironnement.value = (100 /(maxEnvironnement.value - minEnvironnement.value)) * (props.tabScore[0].value + minEnvironnement.value);
-pourcentageFinance.value = (100 /(maxFinance.value - minFinance.value)) * (props.tabScore[1].value + minFinance.value);
-pourcentageConfort.value = (100 /(maxConfort.value - minConfort.value)) * (props.tabScore[2].value + minConfort.value);
-console.log(pourcentageEnvironnement.value)
-console.log(pourcentageFinance.value)
-console.log(pourcentageConfort.value)
+
+pourcentageEnvironnement.value = (100 /(maxEnvironnement.value - minEnvironnement.value)) * (props.tabScore[0].value - minEnvironnement.value);
+pourcentageFinance.value = (100 /(maxFinance.value - minFinance.value)) * (props.tabScore[1].value - minFinance.value);
+pourcentageConfort.value = (100 /(maxConfort.value - minConfort.value)) * (props.tabScore[2].value - minConfort.value);
 
 // pourcentageFinance.value = ;
 // pourcentageConfort.value = ;
@@ -85,7 +77,7 @@ console.log(pourcentageConfort.value)
             <h2 class="main-text"> Bilan </h2>
             <div>
                 <h2> Pourcentage d'environnement : {{ pourcentageEnvironnement }}</h2>
-                <h2> Pourcentage de finance : {{ pourcentageFinanceFinance }}</h2>
+                <h2> Pourcentage de finance : {{ pourcentageFinance }}</h2>
                 <h2> Pourcentage de confort : {{ pourcentageConfort }}</h2>
 
                 <h2 v-for="item of tabScore"> {{ item.key }} : {{ item.value }}</h2>
