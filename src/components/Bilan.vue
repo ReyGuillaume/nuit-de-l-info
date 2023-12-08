@@ -74,14 +74,18 @@ pourcentageConfort.value = (100 /(maxConfort.value - minConfort.value)) * (props
         <div class="document">
             <h2 class="main-text"> Bilan </h2>
             <div>
-                <h2> Pourcentage d'environnement : {{ pourcentageEnvironnement }}</h2>
+                <h2>environnement</h2>
                 <div id="Progress_Status">
-                    <div style="width='pourcentageEnvironnement'" id="myprogressBar"></div>
+                    <div :style="{width: 'clamp(0%,' + pourcentageEnvironnement + '%, 100%)'}" id="myprogressBar" ></div>
                 </div>
-                <h2> Pourcentage de finance : {{ pourcentageFinance }}</h2>
-                <h2> Pourcentage de confort : {{ pourcentageConfort }}</h2>
-
-                <h2 v-for="item of tabScore"> {{ item.key }} : {{ item.value }}</h2>
+                <h2>finance</h2>
+                <div id="Progress_Status">
+                    <div :style="{width: 'clamp(0%,' + pourcentageFinance + '%, 100%)'}" id="myprogressBar"></div>
+                </div>
+                <h2>confort</h2>
+                <div id="Progress_Status">
+                    <div :style="{width: 'clamp(0%,' + pourcentageConfort + '%, 100%)'}" id="myprogressBar"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -91,7 +95,7 @@ pourcentageConfort.value = (100 /(maxConfort.value - minConfort.value)) * (props
 <style scoped>
 
 #Progress_Status {
-  width: 50%;
+  width: 100%;
   background-color: #ddd;
 }
   
@@ -100,26 +104,5 @@ pourcentageConfort.value = (100 /(maxConfort.value - minConfort.value)) * (props
   height: 20px;
   background-color: #4CAF50;
 }
-.global {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.document {
-    width: calc(210 * .25vh);
-    min-height: calc(297 * .25vh);
-    background-color: #fffbfb;
-    padding: 35px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.active {
-    color: blue;
-}
+
 </style>
