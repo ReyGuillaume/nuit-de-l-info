@@ -69,13 +69,31 @@ pourcentageConfort.value = (100 /(maxConfort.value - minConfort.value)) * (props
 const messageFinal = ref(null);
 
 if (pourcentageEnvironnement.value < pourcentageFinance.value && pourcentageEnvironnement.value < pourcentageConfort.value){
-    messageFinal.value = "message Environnement"
+    let random = Math.floor(Math.random()*5);
+    if (random == 0){
+        messageFinal.value = "Changer son mode de chauffage est une bonne chose mais il faut faire attention à ce que l'on choisit. Le fioul est une énergie fossile qui pollue beaucoup. L'isolation est un moyen efficace de réduire sa consommation d'énergie sans changer de mode de chauffage."
+    }
+    else if (random == 1){
+        messageFinal.value = "La consommation de viande est très polluante. Ne pas en manger est quelque chose d'illusoire mais en manger moins est un bon début."
+    }
+    else if (random == 2){
+        messageFinal.value = "Le passage à une voiture électrique est une bonne solution, sous certaines conditions : la voiture doit remplacer une voiture thermique de même gabarit et puissance, et elle doit être utilisée le plus longtemps possible."
+    }
+    else if (random == 3){
+        messageFinal.value = "La température idéale pour une pièce est de 19°C. Chaque degré supplémentaire consomme 7% d'énergie en plus."
+    }
+    else if (random == 4){
+        messageFinal.value = "Le covoiturage ou le prêt de voiture est une bonne solution pour réduire son impact environnemental. Utiliser un véhicule uniquement lorsqu'on en a besoin est à la fois écologique et économique."
+    }
+    else{
+        messageFinal.value = "L'impact digital sur les émissions de gaz à effet de serre représente 4% des émissions mondiales. Trier ses mails est un premier pas pour réduire son impact numérique."
+    }
 }
 else if (pourcentageFinance.value < pourcentageEnvironnement.value && pourcentageFinance.value < pourcentageConfort.value){
-    messageFinal.value = "message Finance"
+    messageFinal.value = "Bravo votre score d'écologie n'est pas le pire !"
 }
 else{
-    messageFinal.value = "message Confort"
+    messageFinal.value = "Bravo votre score d'écologie n'est pas le pire !"
 }
 </script>
 

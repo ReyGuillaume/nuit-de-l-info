@@ -83,7 +83,7 @@ function goNextDay() {
     align-items: center;
     justify-content: center;
     animation: onHoverIcon .5s;
-    z-index: 3;
+    z-index: 2;
 }
 
 .document {
