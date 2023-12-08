@@ -95,9 +95,6 @@ function modifScore(question_id, reponse_id) {
   pourcentageEnvironnement.value = (100 /(maxEnvironnement.value - minEnvironnement.value)) * (tabScore.value[0].value - minEnvironnement.value);
   pourcentageFinance.value = (100 /(maxFinance.value - minFinance.value)) * (tabScore.value[1].value - minFinance.value);
   pourcentageConfort.value = (100 /(maxConfort.value - minConfort.value)) * (tabScore.value[2].value - minConfort.value);
-  console.log(pourcentageEnvironnement.value)
-  console.log(pourcentageFinance.value)
-  console.log(pourcentageConfort.value)
 
 
   questionRepondu.push(reponse_id);
@@ -141,10 +138,11 @@ function saut_question(fin, dataQuestion, questionRepondu, question_id){
     } else {
       require_find = true;
     }
-    
     console.log("question_id + i", question_id + i)
     console.log("tabQuestions.length", tabQuestions.length)
     i++;
+    fin.value = question_id + i >= tabQuestions.length
+
   }
 }
 
@@ -176,7 +174,7 @@ const img = Math.floor(Math.random() * 2) == 0 ? bg1 : bg2;
     <img :src="charlie"  alt="" class="charlie">
     <img :src="img" alt="" class="background">
   </div>
-  <DocumentComp
+  <DocumentComp 
     @modif-score="modifScore"
     :question="dataQuestion"
   ></DocumentComp>
