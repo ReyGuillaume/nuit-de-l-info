@@ -32,7 +32,7 @@ console.log(props.pourcentageConfort)
 
 .Pourcentage{
     position: absolute;
-    z-index: 40;
+    z-index: 2;
     right: 13rem;
     bottom:8rem
 
