@@ -36,14 +36,17 @@ function modifScore(question_id, reponse_id) {
   questionRepondu.push(reponse_id);
   dataQuestion.value = tabQuestions[question_id];
   fin.value = question_id >= tabQuestions.length;
-  dataQuestion.value.reponses = saut_reponse(dataQuestion, questionRepondu)
-  saut_question(fin, dataQuestion, questionRepondu, question_id)
+  if(!fin.value){
+    dataQuestion.value.reponses = saut_reponse(dataQuestion, questionRepondu)
+    saut_question(fin, dataQuestion, questionRepondu, question_id)
+  }
 }
 
 
 function saut_question(fin, dataQuestion, questionRepondu, question_id){
   var require_find = false;
   var i = 1;
+
   while (!require_find && !fin.value) {
     if (dataQuestion.value.require != null) {
       if (!questionRepondu.find((elt) => elt == dataQuestion.value.require)) {
@@ -54,20 +57,12 @@ function saut_question(fin, dataQuestion, questionRepondu, question_id){
     } else {
       require_find = true;
     }
-    fin.value = question_id + i >= tabQuestions.length;
+    
+    console.log("question_id + i", question_id + i)
+    console.log("tabQuestions.length", tabQuestions.length)
     i++;
   }
 }
-
-function arrayRemove(arr, value) { 
-  let new_arr = []
-  for (var i in arr) {
-    if (arr[i] != value) {
-      new_arr.push(arr[i])
-    }
-  }
-  return new_arr
-} 
 
 function saut_reponse(dataQuestion, questionRepondu){
   var reponse_arr = []
