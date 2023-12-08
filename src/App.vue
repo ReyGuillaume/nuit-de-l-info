@@ -1,6 +1,6 @@
 <script setup>
 import DocumentComp from './components/DocumentComp.vue'
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import storie from './Stories.json'
 
 import fg1 from '../images/bureau1.png'
@@ -28,10 +28,28 @@ dataQuestion.value = tabQuestions[ question_id ];
 
 const img = Math.floor(Math.random() * 2) == 0 ? bg1 : bg2
 
+const lampOn = ref(false);
+
+function toogleLamp(){
+  if (window.innerWidth >= 1500 && window.innerHeight >= 700){
+    lampOn.value = !lampOn.value;
+  }
+}
+
+onMounted(() => {
+    window.addEventListener('resize', ()=>{lampOn.value = false});
+  });
+
+onUnmounted(()=>{
+  window.addEventListener('resize', ()=>{lampOn.value = false});
+})
 </script>
 
 <template>
+  
   <div class="back">
+    <div id="lamp" @click="toogleLamp"></div>
+  <div v-if="lampOn" class="lampon"></div>
     <img :src="fg1" alt="" class="foreground">
     <img :src="img" alt="" class="background">
   </div>
@@ -54,4 +72,24 @@ const img = Math.floor(Math.random() * 2) == 0 ? bg1 : bg2
 
   bottom: 0px;
 }
+
+#lamp{
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  left: 9.3rem;
+  bottom: 10rem;
+  z-index: 10;
+}
+
+.lampon {
+  position: absolute;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 0, 1) 0%, rgba(175, 212, 0, 0) 40%, rgba(229, 238, 130, 0) 50%);
+  width: 20rem;
+  height: 20rem;
+  left: 0.7rem;
+  bottom: 15rem;
+  z-index: 5;
+}
+
 </style>
