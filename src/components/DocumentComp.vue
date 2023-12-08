@@ -50,9 +50,6 @@ defineProps({
         </div>
     </div>
   </div>
-  <div v-else>
-    Loading or placeholder content...
-  </div>
 </template>
 
 <style>

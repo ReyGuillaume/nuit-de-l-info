@@ -66,6 +66,17 @@ pourcentageEnvironnement.value = (100 /(maxEnvironnement.value - minEnvironnemen
 pourcentageFinance.value = (100 /(maxFinance.value - minFinance.value)) * (props.tabScore[1].value - minFinance.value);
 pourcentageConfort.value = (100 /(maxConfort.value - minConfort.value)) * (props.tabScore[2].value - minConfort.value);
 
+const messageFinal = ref(null);
+
+if (pourcentageEnvironnement.value < pourcentageFinance.value && pourcentageEnvironnement.value < pourcentageConfort.value){
+    messageFinal.value = "message Environnement"
+}
+else if (pourcentageFinance.value < pourcentageEnvironnement.value && pourcentageFinance.value < pourcentageConfort.value){
+    messageFinal.value = "message Finance"
+}
+else{
+    messageFinal.value = "message Confort"
+}
 </script>
 
 
@@ -73,6 +84,7 @@ pourcentageConfort.value = (100 /(maxConfort.value - minConfort.value)) * (props
     <div class="global">
         <div class="document">
             <h2 class="main-text"> Bilan </h2>
+            <h2>{{ messageFinal }}</h2>
             <div>
                 <h2>environnement</h2>
                 <div id="Progress_Status">
@@ -103,6 +115,35 @@ pourcentageConfort.value = (100 /(maxConfort.value - minConfort.value)) * (props
   width: 2%;
   height: 20px;
   background-color: #4CAF50;
+}
+.global {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: onHoverIcon .5s;
+    word-break: break-all;
+
+}
+.document {
+    width: calc(250 * .25vh);
+    min-height: calc(297 * .25vh);
+    background-color: #fffbfb;
+    background-color: rgba(238, 228, 228, 0.896);
+    border-radius: 8%;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.main-text {
+    color: #025627;
 }
 
 </style>
