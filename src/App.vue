@@ -2,11 +2,15 @@
 import DocumentComp from "./components/DocumentComp.vue";
 import Bilan from "./components/Bilan.vue";
 
-import { ref, onMounted } from "vue";
-import storie from "./Stories.json";
-import fg1 from "../images/bureau1.png";
-import bg1 from "../images/background1.png";
-import bg2 from "../images/background2.png";
+import { ref, onMounted } from 'vue';
+import storie from './Stories.json'
+import fg1 from '../images/bureau1.png'
+import bg1 from '../images/background1.png'
+import bg2 from '../images/background2.png'
+import bg3 from '../images/bg3.png'
+import bg4 from '../images/bg4.png'
+import bg5 from '../images/bg5.png'
+import bg6 from '../images/bg6.png'
 
 var tabQuestions = storie.Sarah.questions;
 var dataQuestion = ref(tabQuestions[0]);
