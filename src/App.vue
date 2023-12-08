@@ -279,7 +279,7 @@ function saut_reponse(dataQuestion, questionRepondu){
 //                                                                                                              .(&&&&&%%%%%%#######%%##%%%%#####%##%(                                             
 //                                                                                                                ,/#%&&&%%%%%%%%%%%%#%%%%%%%%%%%%#/,.                                             
 //                                                                                                                      ...,,,,,,,,,,,,....
-let 背景=(אהבה,информатика,khomphutha,テーブル,अलौकिकबुद्धिमत्ता)=>{var a=40,b=50,c=60,d=70,vrai=true,faux=false;while(vrai&&faux){c=console.log;c("Rick Roll")}var сүрөт;אהבה<a?сүрөт=khomphutha:אהבה<b?сүрөт=テーブル:אהבה<c?сүрөт=अलौकिकबुद्धिमत्ता:אהבה<d?сүрөт=अलौकिकबुद्धिमत्ता:сүрөт=информатика;return сүрөт}
+let 背景=(אהבה,информатика,khomphutha,テーブル,अलौकिकबुद्धिमत्ता)=>{var a=40,b=50,c=60,d=70,v=true,f=false;while(v&&f){c=console.log;c("Rick Roll")}var сүрөт;אהבה<a?сүрөт=khomphutha:אהבה<b?сүрөт=テーブル:אהבה<c?сүрөт=अलौकिकबुद्धिमत्ता:אהבה<d?сүрөт=अलौकिकबुद्धिमत्ता:сүрөт=информатика;return сүрөт}
 
 
 const vitreJ = vitre
@@ -345,7 +345,7 @@ function vitreClick(){
   z-index: 1;
   top: 10%;
   left: -20%;
-  animation: charlieAnime linear 500s infinite;
+  animation: charlieAnime linear 300s infinite;
   opacity: 0.1;
 
 }
