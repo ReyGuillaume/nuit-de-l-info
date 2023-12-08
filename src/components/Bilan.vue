@@ -66,8 +66,6 @@ pourcentageEnvironnement.value = (100 /(maxEnvironnement.value - minEnvironnemen
 pourcentageFinance.value = (100 /(maxFinance.value - minFinance.value)) * (props.tabScore[1].value - minFinance.value);
 pourcentageConfort.value = (100 /(maxConfort.value - minConfort.value)) * (props.tabScore[2].value - minConfort.value);
 
-// pourcentageFinance.value = ;
-// pourcentageConfort.value = ;
 </script>
 
 
@@ -77,6 +75,9 @@ pourcentageConfort.value = (100 /(maxConfort.value - minConfort.value)) * (props
             <h2 class="main-text"> Bilan </h2>
             <div>
                 <h2> Pourcentage d'environnement : {{ pourcentageEnvironnement }}</h2>
+                <div id="Progress_Status">
+                    <div style="width='pourcentageEnvironnement'" id="myprogressBar"></div>
+                </div>
                 <h2> Pourcentage de finance : {{ pourcentageFinance }}</h2>
                 <h2> Pourcentage de confort : {{ pourcentageConfort }}</h2>
 
@@ -88,6 +89,17 @@ pourcentageConfort.value = (100 /(maxConfort.value - minConfort.value)) * (props
 
 
 <style scoped>
+
+#Progress_Status {
+  width: 50%;
+  background-color: #ddd;
+}
+  
+#myprogressBar {
+  width: 2%;
+  height: 20px;
+  background-color: #4CAF50;
+}
 .global {
     position: absolute;
     top: 0;

@@ -31,7 +31,7 @@ tabScore.value[1].value += reponse.score.finance;
 tabScore.value[2].value += reponse.score.confort;
 
 questionRepondu.push(reponse_id)
-console.log(tabScore)
+
 dataQuestion.value = tabQuestions[ question_id ];
 fin.value = question_id >= tabQuestions.length
 var fin = false;
