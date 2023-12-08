@@ -2,6 +2,8 @@
 
 import DocumentComp from './components/DocumentComp.vue'
 import Bilan from "./components/Bilan.vue";
+import Pourcentage from "./components/Pourcentage.vue";
+
 import { ref, onMounted, onUnmounted } from 'vue';
 
 import storie from './Stories.json'
@@ -114,7 +116,7 @@ function modifScore(question_id, reponse_id) {
 const lampOn = ref(false);
 
 function toogleLamp(){
-  if (window.innerWidth >= 1500 && window.innerHeight >= 700){
+  if (window.innerWidth >= 1400 && window.innerHeight >= 600){
     lampOn.value = !lampOn.value;
   }
 }
@@ -194,6 +196,8 @@ function change_background(env,bg1,bg3,bg5,bg6){
     :question="dataQuestion"
   ></DocumentComp>
   <Bilan v-if="fin" :tabQuestions="tabQuestions" :tabScore="tabScore"></Bilan>
+  <Pourcentage v-if="pourcentageConfort && !fin" :pourcentageConfort="pourcentageConfort" :pourcentageEnvironnement="pourcentageEnvironnement" :pourcentageFinance="pourcentageFinance"></Pourcentage>
+
 </template>
 
 <style scoped>
@@ -235,7 +239,7 @@ function change_background(env,bg1,bg3,bg5,bg6){
 
 #lamp{
   position: absolute;
-  width: 2rem;
+  width: 3rem;
   height: 2rem;
   left: 9.3rem;
   bottom: 10rem;

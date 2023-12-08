@@ -4,29 +4,76 @@ defineProps({
     question: Object
 })
 
+var day = 1
+function goNextDay() {
+    let global = document.querySelector('.global')  
+    let blackscreen = document.querySelector('.blackscreen')
+    day++
+    blackscreen.style.zIndex = '3'
+    blackscreen.classList.add('show')
+    global.style.display = 'none'
+    setTimeout(() => {
+        blackscreen.classList.remove('show')
+        global.style.display = 'flex'
+    }, 3000)
+    setTimeout(() => {
+        blackscreen.style.zIndex = '1'
+    }, 5800)
+    // wait 3s before removing z-index
+
+}
 </script>
 
 <template>
      <div v-if="question">
+        <div class="blackscreen">
+            <h1>Jour {{ day }}</h1>
+        </div>
         <div class="global">
-        <div class="document">
-            <h2 class="main-text" v-html="question.question"></h2>
+            <div class="document">
+                <h2 class="main-text" v-html="question.question"></h2>
 
-            <div class="reponses">
-                <div class="reponse" v-for="item of question.reponses" :key="item.id" >
-                    <button
-                    @click="$emit('modifScore', question.id_question, item.id_reponse)">
-                        {{ item.reponse }}
-                    </button>
+                <div class="reponses">
+                    <div class="reponse" v-for="item of question.reponses" :key="item.id" >
+                        <button
+                        @click="goNextDay(); $emit('modifScore', question.id_question, item.id_reponse)">
+                            {{ item.reponse }}
+                        
+                        </button>
+                    </div>
                 </div>
+            
             </div>
-         
         </div>
     </div>
-  </div>
 </template>
 
 <style>
+.blackscreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    font-size: 5em;
+
+    opacity: 0;
+    transition: opacity 3s;
+}
+
+.blackscreen.show {
+    opacity: 1;
+}
+
+
+
 .global {
     position: absolute;
     top: 0;
@@ -39,6 +86,7 @@ defineProps({
     animation: onHoverIcon .5s;
     z-index: 2;
 }
+
 .document {
     width: calc(250 * .25vh);
     min-height: calc(297 * .25vh);
