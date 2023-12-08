@@ -1,10 +1,7 @@
 <script setup>
 import { ref } from "vue";
 const props = defineProps(["pourcentageEnvironnement", "pourcentageFinance", "pourcentageConfort"])
-console.log("ezaeaz")
-console.log(props.pourcentageEnvironnement)
-console.log(props.pourcentageFinance)
-console.log(props.pourcentageConfort)
+
 
 
 </script>

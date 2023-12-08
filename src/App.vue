@@ -285,7 +285,6 @@ let 背景=(אהבה,информатика,khomphutha,テーブル,अलौक
 const vitreJ = vitre
 
 function vitreClick(){
-  console.log("clique")
   var image = document.getElementsByClassName("vitre")[0]
   image.style.display = "block"
 }

@@ -15,11 +15,11 @@ function goNextDay() {
     setTimeout(() => {
         blackscreen.classList.remove('show')
         global.style.display = 'flex'
-    }, 2000)
+    }, 3000)
     setTimeout(() => {
         blackscreen.style.zIndex = '1'
-    }, 4800)
-    // wait 3s before removing z-index
+    }, 5800)
+    // wait 5.8s before removing z-index
 
 }
 </script>
@@ -83,7 +83,7 @@ function goNextDay() {
     align-items: center;
     justify-content: center;
     animation: onHoverIcon .5s;
-    z-index: 3;
+    z-index: 4;
 }
 
 .document {
