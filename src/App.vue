@@ -9,7 +9,7 @@ import bg2 from '../images/background2.png'
 
 var tabQuestions = storie.Sarah.questions
 var dataQuestion = ref(tabQuestions[0]);
-
+var questionRepondu = []
 
 const tabScore = ref([
   { key: 'environnement', value:0 },
@@ -17,16 +17,35 @@ const tabScore = ref([
   { key: 'confort', value: 0 }
 ]);
 
+
+// Modifie le score
 function modifScore(question_id, reponse_id){
 const question = tabQuestions.find(elt => elt.id_question == question_id)
 const reponse = question.reponses.find(elt => elt.id_reponse == reponse_id)
+
+// modification des score
 tabScore.value[0].value += reponse.score.environnement;
 tabScore.value[1].value += reponse.score.finance;
 tabScore.value[2].value += reponse.score.confort;
-dataQuestion.value = tabQuestions[ question_id ];
-}
 
+questionRepondu.push(reponse_id)
+dataQuestion.value = tabQuestions[ question_id ];
+var fin = false;
+var i = 1;
+while(!fin){
+  if(dataQuestion.value.require != null){
+    if(!(questionRepondu.find(elt => elt == dataQuestion.value.require))){
+        dataQuestion.value = tabQuestions[ question_id + i];
+     }
+    }else{
+      fin = true
+    }
+    i++
+  }
+}
 const img = Math.floor(Math.random() * 2) == 0 ? bg1 : bg2
+
+
 
 </script>
 
